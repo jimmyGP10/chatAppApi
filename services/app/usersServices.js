@@ -36,9 +36,19 @@ var userMethods ={
             response.send("Error: "+ error)
             })        
     },
-
-
-
+    getUserByUid: function(request, response){
+        User.findOne({
+            where: {
+                uid: request.params.uid
+              } 
+        })
+        .then(user=>{
+            response.json(user);
+        })
+        .catch((error)=>{
+            response.send("Error: "+ error)
+            })        
+    },
 }
 
 module.exports= userMethods;
