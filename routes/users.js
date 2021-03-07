@@ -7,6 +7,7 @@ router.post('/add', userMethods.addUser);
 router.get('/', userMethods.getUsers);
 router.get('/byId/:id?', userMethods.getUserById);
 router.get('/ByUid/:uid?', userMethods.getUserByUid);
+router.get('/ByEmail/:email?', userMethods.getUserByEmail);
 
 
 

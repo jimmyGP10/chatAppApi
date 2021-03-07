@@ -49,6 +49,19 @@ var userMethods ={
             response.send("Error: "+ error)
             })        
     },
+    getUserByEmail: function(request, response){
+        User.findOne({
+            where: {
+                email: request.params.email
+              } 
+        })
+        .then(user=>{
+            response.json(user);
+        })
+        .catch((error)=>{
+            response.send("Error: "+ error)
+            })        
+    },
 }
 
 module.exports= userMethods;
