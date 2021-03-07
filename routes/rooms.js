@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const RoomMethods = require('../services/app/RoomServices');
+const RoomMethods = require('../services/app/roomServices');
 
 
 router.post('/add', RoomMethods.addRoom);
